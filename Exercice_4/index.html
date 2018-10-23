@@ -1,13 +1,27 @@
 <!DOCTYPE html>
-<html ng-app="app" ng-controller="testCtrl">
-  <head>
-    <meta charset="utf-8">
-    <title>Exercice 4</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <div>
-    </div>
-  </body>
+<html ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>Exercice 4</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <div>
+    <body>
+      <div ng-controller="costCtrl">
+
+        {{ pi | currency : "€" }}
+
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+      <script>
+      var app = angular.module('myApp', []);
+      app.controller('costCtrl', function($scope) {
+        $scope.pi = 3.14;
+      });
+      </script>
+    </body>
+  </div>
+</body>
 </html>
